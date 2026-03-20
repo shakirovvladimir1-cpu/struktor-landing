@@ -1,20 +1,20 @@
 "use client";
-import { Cinzel, Crimson_Text } from "next/font/google";
 
-const cinzel = Cinzel({ subsets: ["latin"], weight: ["400", "600", "700", "900"] });
-const crimson = Crimson_Text({ subsets: ["latin"], weight: ["400", "600"] });
+
+const cinzel = "font-cinzel";
+const crimson = "font-crimson";
 
 export default function HomeV5() {
   return (
-    <main className={`min-h-screen ${crimson.className}`} style={{ background: "#0d0907", color: "#E8D5A3" }}>
-      <Nav font={cinzel.className} />
-      <Hero font={cinzel.className} />
-      <Senatus font={cinzel.className} />
-      <Legions font={cinzel.className} />
-      <ViaRomana font={cinzel.className} />
-      <Triumphus font={cinzel.className} />
-      <Foedus font={cinzel.className} />
-      <Footer font={cinzel.className} />
+    <main className={`min-h-screen ${crimson}`} style={{ background: "#0d0907", color: "#E8D5A3" }}>
+      <Nav font={cinzel} />
+      <Hero font={cinzel} />
+      <Senatus font={cinzel} />
+      <Legions font={cinzel} />
+      <ViaRomana font={cinzel} />
+      <Triumphus font={cinzel} />
+      <Foedus font={cinzel} />
+      <Footer font={cinzel} />
     </main>
   );
 }
@@ -100,11 +100,11 @@ function Hero({ font }: { font: string }) {
 
         <div className="w-32 h-px mx-auto my-8" style={{ background: "#C9A227", opacity: 0.6 }} />
 
-        <p className={`${crimson.className} text-xl md:text-2xl max-w-3xl mx-auto mb-4 leading-relaxed`} style={{ color: "#E8D5A3", opacity: 0.85 }}>
+        <p className={`${crimson} text-xl md:text-2xl max-w-3xl mx-auto mb-4 leading-relaxed`} style={{ color: "#E8D5A3", opacity: 0.85 }}>
           Как Легионы строили Римскую Империю — мы строим порядок в вашем бизнесе.
           Автоматизация, CRM, ИИ-агенты — всё по команде.
         </p>
-        <p className={`${crimson.className} text-lg mb-12`} style={{ color: "#C9A227", opacity: 0.7 }}>
+        <p className={`${crimson} text-lg mb-12`} style={{ color: "#C9A227", opacity: 0.7 }}>
           Малый и средний бизнес · 7 дней без риска
         </p>
 

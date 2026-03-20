@@ -21,3 +21,9 @@ body {
   color: var(--foreground);
   font-family: 'Inter', Arial, sans-serif;
 }
+
+.font-inter { font-family: 'Inter', Arial, sans-serif; }
+.font-cinzel { font-family: 'Cinzel', Georgia, serif; }
+.font-crimson { font-family: 'Crimson Text', Georgia, serif; }
+.font-medieval { font-family: 'MedievalSharp', Georgia, serif; }
+.font-goudy { font-family: 'Sorts Mill Goudy', Georgia, serif; }

@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
   title: "Struktor — Автоматизация бизнеса",
@@ -16,7 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" className="h-full">
-      <body className={`${inter.className} min-h-full`}>{children}</body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cinzel:wght@400;600;700;900&family=Crimson+Text:wght@400;600&family=MedievalSharp&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet" />
+      </head>
+      <body className="font-inter min-h-full">{children}</body>
     </html>
   );
 }

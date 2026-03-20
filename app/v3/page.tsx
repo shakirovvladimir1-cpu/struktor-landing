@@ -1,23 +1,23 @@
-import { Cinzel, Crimson_Text } from "next/font/google";
 
-const cinzel = Cinzel({ subsets: ["latin"], weight: ["400", "700", "900"] });
-const crimson = Crimson_Text({ subsets: ["latin", "cyrillic"], weight: ["400", "600"] });
+
+const cinzel = "font-cinzel";
+const crimson = "font-crimson";
 
 export default function HomeV3() {
   return (
-    <main className={`min-h-screen bg-[#120a00] text-[#e8d5a3] ${crimson.className}`}>
-      <Nav cinzel={cinzel.className} />
-      <Hero cinzel={cinzel.className} />
+    <main className={`min-h-screen bg-[#120a00] text-[#e8d5a3] ${crimson}`}>
+      <Nav cinzel={cinzel} />
+      <Hero cinzel={cinzel} />
       <Divider />
-      <Pains cinzel={cinzel.className} />
+      <Pains cinzel={cinzel} />
       <Divider />
-      <Services cinzel={cinzel.className} />
+      <Services cinzel={cinzel} />
       <Divider />
-      <HowItWorks cinzel={cinzel.className} />
+      <HowItWorks cinzel={cinzel} />
       <Divider />
-      <Results cinzel={cinzel.className} />
-      <FinalCTA cinzel={cinzel.className} />
-      <Footer cinzel={cinzel.className} />
+      <Results cinzel={cinzel} />
+      <FinalCTA cinzel={cinzel} />
+      <Footer cinzel={cinzel} />
     </main>
   );
 }

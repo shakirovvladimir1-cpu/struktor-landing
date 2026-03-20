@@ -1,21 +1,21 @@
-import { MedievalSharp } from "next/font/google";
-import { Sorts_Mill_Goudy } from "next/font/google";
 
-const medieval = MedievalSharp({ subsets: ["latin"], weight: "400" });
-const goudy = Sorts_Mill_Goudy({ subsets: ["latin", "cyrillic"], weight: ["400"] });
+
+
+const medieval = "font-medieval";
+const goudy = "font-goudy";
 
 export default function HomeV4() {
   return (
-    <main className={`min-h-screen bg-[#0d0a07] ${goudy.className}`} style={{ color: "#f0e6c8" }}>
-      <Nav font={medieval.className} />
-      <Hero font={medieval.className} />
-      <Pains font={medieval.className} />
-      <KnightsGallery font={medieval.className} />
-      <Services font={medieval.className} />
-      <HowItWorks font={medieval.className} />
-      <Results font={medieval.className} />
-      <FinalCTA font={medieval.className} />
-      <Footer font={medieval.className} />
+    <main className={`min-h-screen bg-[#0d0a07] ${goudy}`} style={{ color: "#f0e6c8" }}>
+      <Nav font={medieval} />
+      <Hero font={medieval} />
+      <Pains font={medieval} />
+      <KnightsGallery font={medieval} />
+      <Services font={medieval} />
+      <HowItWorks font={medieval} />
+      <Results font={medieval} />
+      <FinalCTA font={medieval} />
+      <Footer font={medieval} />
     </main>
   );
 }
