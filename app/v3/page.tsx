@@ -320,7 +320,7 @@ function FinalCTA({ cinzel }: { cinzel: string }) {
             Нет — не должны ни гроша.
           </p>
           <a
-            href="https://t.me/struktor"
+            href="https://t.me/SwDeepak"
             className={`${cinzel} inline-block bg-[#c9942a] hover:bg-[#b8831a] text-[#120a00] font-black px-10 py-4 rounded-sm transition-colors text-base tracking-widest uppercase shadow-lg shadow-[#c9942a]/20`}
           >
             ⚔ Записаться на совет
@@ -339,7 +339,7 @@ function Footer({ cinzel }: { cinzel: string }) {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <span className={`${cinzel} text-xl font-bold text-[#c9942a] tracking-widest`}>⚔ STRUKTOR</span>
         <p className="text-[#e8d5a3]/30 text-sm tracking-wide">© Anno Domini 2025. Орден Автоматизаторов.</p>
-        <a href="https://t.me/struktor" className="text-[#e8d5a3]/40 hover:text-[#c9942a] text-sm transition-colors tracking-wider">
+        <a href="https://t.me/SwDeepak" className="text-[#e8d5a3]/40 hover:text-[#c9942a] text-sm transition-colors tracking-wider">
           Связь с Орденом →
         </a>
       </div>

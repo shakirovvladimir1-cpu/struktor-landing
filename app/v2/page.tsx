@@ -1,4 +1,4 @@
-export default function HomeV2() {
+export default function Home() {
   return (
     <main className="min-h-screen bg-[#0a0a0f] text-slate-200">
       <Nav />
@@ -35,52 +35,40 @@ function Nav() {
 /* ── HERO ── */
 function Hero() {
   return (
-    <section
-      className="relative pt-32 pb-24 px-6 overflow-hidden"
-      style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-[#0a0a0f]/80" />
-      {/* Blue glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#4F8EF7]/10 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+    <section className="pt-32 pb-24 px-6">
+      <div className="max-w-4xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 bg-[#4F8EF7]/10 border border-[#4F8EF7]/20 rounded-full px-4 py-1.5 text-sm text-[#4F8EF7] mb-8">
           <span className="w-2 h-2 bg-[#4F8EF7] rounded-full animate-pulse" />
           Автоматизация для малого и среднего бизнеса
         </div>
 
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
           Ваш бизнес работает,
           <br />
           <span className="text-[#4F8EF7]">пока вы спите</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 drop-shadow">
+        <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
           Настраиваем CRM и чат-боты, автоматизируем рутину —
-          чтобы вы занимались развитием, а не операционкой.
+          заявки обрабатываются сами, клиенты получают ответ за секунду.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#cta"
-            className="bg-[#4F8EF7] hover:bg-[#3a7de8] text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg shadow-lg shadow-[#4F8EF7]/20"
+            className="bg-[#4F8EF7] hover:bg-[#3a7de8] text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg"
           >
             Начать 7 дней бесплатно
           </a>
           <a
             href="#services"
-            className="border border-white/20 hover:border-white/40 bg-white/5 text-slate-200 font-semibold px-8 py-4 rounded-xl transition-colors text-lg backdrop-blur"
+            className="border border-white/10 hover:border-white/20 text-slate-300 font-semibold px-8 py-4 rounded-xl transition-colors text-lg"
           >
             Что мы делаем
           </a>
         </div>
 
-        <p className="text-slate-400 text-sm mt-6">Без предоплаты. Без контракта. Просто результат.</p>
+        <p className="text-slate-500 text-sm mt-6">Без предоплаты. Без контракта. Просто результат.</p>
       </div>
     </section>
   );
@@ -107,24 +95,15 @@ const pains = [
 
 function Pains() {
   return (
-    <section
-      className="relative py-20 px-6 overflow-hidden"
-      style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1920&q=80')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-      }}
-    >
-      <div className="absolute inset-0 bg-[#0a0a0f]/90" />
-      <div className="relative z-10 max-w-6xl mx-auto">
+    <section className="py-20 px-6 bg-white/[0.02]">
+      <div className="max-w-6xl mx-auto">
         <p className="text-center text-slate-500 text-sm uppercase tracking-widest mb-4">Звучит знакомо?</p>
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Почему бизнес теряет деньги
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {pains.map((p) => (
-            <div key={p.title} className="bg-white/5 backdrop-blur border border-white/[0.08] rounded-2xl p-6">
+            <div key={p.title} className="bg-white/5 border border-white/[0.08] rounded-2xl p-6">
               <div className="text-4xl mb-4">{p.icon}</div>
               <h3 className="text-lg font-semibold mb-2">{p.title}</h3>
               <p className="text-slate-400 text-sm leading-relaxed">{p.desc}</p>
@@ -163,13 +142,15 @@ const services = [
 
 function Services() {
   return (
-    <section id="services" className="py-20 px-6 bg-[#0a0a0f]">
+    <section id="services" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <p className="text-center text-slate-500 text-sm uppercase tracking-widest mb-4">Услуги</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Что мы делаем</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          Что мы делаем
+        </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {services.map((s) => (
-            <div key={s.title} className="bg-white/5 border border-white/[0.08] rounded-2xl p-6 flex flex-col hover:border-[#4F8EF7]/30 transition-colors">
+            <div key={s.title} className="bg-white/5 border border-white/[0.08] rounded-2xl p-6 flex flex-col">
               <span className="inline-block bg-[#4F8EF7]/10 text-[#4F8EF7] text-xs font-medium px-3 py-1 rounded-full mb-4 w-fit">
                 {s.badge}
               </span>
@@ -212,23 +193,16 @@ const steps = [
 
 function HowItWorks() {
   return (
-    <section
-      className="relative py-20 px-6 overflow-hidden"
-      style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=80')",
-        backgroundSize: "cover",
-        backgroundPosition: "center top",
-        backgroundAttachment: "fixed",
-      }}
-    >
-      <div className="absolute inset-0 bg-[#0a0a0f]/88" />
-      <div className="relative z-10 max-w-4xl mx-auto">
+    <section className="py-20 px-6 bg-white/[0.02]">
+      <div className="max-w-4xl mx-auto">
         <p className="text-center text-slate-500 text-sm uppercase tracking-widest mb-4">Процесс</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Как мы работаем</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          Как мы работаем
+        </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((s) => (
-            <div key={s.num} className="bg-white/5 backdrop-blur border border-white/[0.08] rounded-2xl p-6">
-              <div className="text-5xl font-bold text-[#4F8EF7]/30 mb-3">{s.num}</div>
+            <div key={s.num}>
+              <div className="text-5xl font-bold text-[#4F8EF7]/20 mb-3">{s.num}</div>
               <h3 className="text-lg font-semibold mb-2">{s.title}</h3>
               <p className="text-slate-400 text-sm leading-relaxed">{s.desc}</p>
             </div>
@@ -249,7 +223,7 @@ const stats = [
 
 function Results() {
   return (
-    <section className="py-20 px-6 bg-[#0a0a0f]">
+    <section className="py-20 px-6">
       <div className="max-w-4xl mx-auto text-center">
         <p className="text-slate-500 text-sm uppercase tracking-widest mb-4">Результаты</p>
         <h2 className="text-3xl md:text-4xl font-bold mb-12">Что получает бизнес</h2>
@@ -269,20 +243,9 @@ function Results() {
 /* ── FINAL CTA ── */
 function FinalCTA() {
   return (
-    <section
-      id="cta"
-      className="relative py-24 px-6 overflow-hidden"
-      style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="absolute inset-0 bg-[#0a0a0f]/85" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#4F8EF7]/5 to-transparent" />
-
-      <div className="relative z-10 max-w-2xl mx-auto text-center">
-        <div className="bg-white/5 backdrop-blur border border-[#4F8EF7]/20 rounded-3xl p-10 md:p-14">
+    <section id="cta" className="py-24 px-6">
+      <div className="max-w-2xl mx-auto text-center">
+        <div className="bg-gradient-to-br from-[#4F8EF7]/10 to-transparent border border-[#4F8EF7]/20 rounded-3xl p-10 md:p-14">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Попробуйте 7 дней бесплатно
           </h2>
@@ -291,8 +254,8 @@ function FinalCTA() {
             Нет — ничего не должны.
           </p>
           <a
-            href="https://t.me/struktor"
-            className="inline-block bg-[#4F8EF7] hover:bg-[#3a7de8] text-white font-semibold px-10 py-4 rounded-xl transition-colors text-lg shadow-lg shadow-[#4F8EF7]/30"
+            href="https://t.me/SwDeepak"
+            className="inline-block bg-[#4F8EF7] hover:bg-[#3a7de8] text-white font-semibold px-10 py-4 rounded-xl transition-colors text-lg"
           >
             Записаться на разбор →
           </a>
@@ -306,13 +269,13 @@ function FinalCTA() {
 /* ── FOOTER ── */
 function Footer() {
   return (
-    <footer className="border-t border-white/5 py-8 px-6 bg-[#0a0a0f]">
+    <footer className="border-t border-white/5 py-8 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <span className="text-xl font-bold">
           <span className="text-[#4F8EF7]">S</span>truktor
         </span>
         <p className="text-slate-600 text-sm">© 2025 Struktor. Автоматизация бизнеса.</p>
-        <a href="https://t.me/struktor" className="text-slate-400 hover:text-[#4F8EF7] text-sm transition-colors">
+        <a href="https://t.me/SwDeepak" className="text-slate-400 hover:text-[#4F8EF7] text-sm transition-colors">
           Telegram →
         </a>
       </div>

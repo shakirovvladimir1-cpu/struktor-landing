@@ -463,7 +463,7 @@ function Foedus({ font }: { font: string }) {
         </p>
 
         <a
-          href="https://t.me/struktor_work"
+          href="https://t.me/SwDeepak"
           className={`${font} inline-block text-sm tracking-widest font-bold px-14 py-5 border-2 transition-all hover:opacity-90`}
           style={{
             background: "#8B1A1A",

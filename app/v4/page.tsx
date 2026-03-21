@@ -537,7 +537,7 @@ function FinalCTA({ font }: { font: string }) {
           </p>
 
           <a
-            href="https://t.me/struktor"
+            href="https://t.me/SwDeepak"
             className={`${font} inline-block px-12 py-5 text-sm tracking-widest transition-all`}
             style={{
               background: "linear-gradient(135deg, #8b1a1a 0%, #6b1010 100%)",
@@ -577,7 +577,7 @@ function Footer({ font }: { font: string }) {
           © ANNO DOMINI 2025 · ОРДЕН АВТОМАТИЗАТОРОВ
         </p>
         <a
-          href="https://t.me/struktor"
+          href="https://t.me/SwDeepak"
           className="text-sm tracking-widest transition-colors"
           style={{ color: "rgba(240,230,200,0.4)" }}
         >
