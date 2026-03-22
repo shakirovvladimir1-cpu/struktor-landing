@@ -2,8 +2,35 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Struktor — Автоматизация бизнеса",
-  description: "Автоматизируем бизнес-процессы, настраиваем CRM и ИИ-агентов для малого и среднего бизнеса. 7 дней бесплатного тестирования.",
+  title: "Struktor — Автоматизация бизнеса в Казахстане | AmoCRM, WhatsApp бот, ИИ-агент",
+  description: "Настраиваем AmoCRM, WhatsApp и Telegram боты, автоматизируем бизнес-процессы для малого и среднего бизнеса в Астане, Алматы и по всему Казахстану. 7 дней бесплатно.",
+  keywords: [
+    "автоматизация бизнеса Казахстан",
+    "настройка AmoCRM Астана",
+    "WhatsApp бот для бизнеса",
+    "Telegram бот для заявок",
+    "CRM для малого бизнеса Алматы",
+    "ИИ агент для продаж",
+    "автоматизация продаж Казахстан",
+    "чат-бот для WhatsApp Астана",
+    "настройка CRM Казахстан",
+    "автоматическая обработка заявок",
+  ],
+  openGraph: {
+    title: "Struktor — Автоматизация бизнеса в Казахстане",
+    description: "Настраиваем AmoCRM, WhatsApp и Telegram боты, автоматизируем бизнес-процессы. 7 дней бесплатно.",
+    url: "https://struktor.work",
+    siteName: "Struktor",
+    locale: "ru_KZ",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://struktor.work",
+  },
 };
 
 export default function RootLayout({
