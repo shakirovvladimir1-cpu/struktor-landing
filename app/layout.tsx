@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://struktor.work",
   },
+  verification: {
+    google: "uIj0vt5zdt0cKQnTUfFwnGaHQgPeBFRmeMPFGwa0EM8",
+  },
 };
 
 export default function RootLayout({
