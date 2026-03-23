@@ -7,6 +7,7 @@ export default function HomeV2() {
       <Services />
       <HowItWorks />
       <Results />
+      <FAQ />
       <FinalCTA />
       <Footer />
     </main>
@@ -49,16 +50,16 @@ function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#4F8EF7]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 bg-[#4F8EF7]/10 border border-[#4F8EF7]/20 rounded-full px-4 py-1.5 text-sm text-[#4F8EF7] mb-8">
+        <h1 className="inline-flex items-center gap-2 bg-[#4F8EF7]/10 border border-[#4F8EF7]/20 rounded-full px-4 py-1.5 text-sm text-[#4F8EF7] mb-8">
           <span className="w-2 h-2 bg-[#4F8EF7] rounded-full animate-pulse" />
-          Автоматизация для малого и среднего бизнеса
-        </div>
+          Автоматизация бизнеса в Казахстане — AmoCRM, WhatsApp боты, ИИ-агенты
+        </h1>
 
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
+        <p className="text-4xl md:text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
           Ваш бизнес работает,
           <br />
           <span className="text-[#4F8EF7]">пока вы спите</span>
-        </h1>
+        </p>
 
         <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 drop-shadow">
           Настраиваем CRM и чат-боты, автоматизируем рутину —
@@ -120,7 +121,7 @@ function Pains() {
       <div className="relative z-10 max-w-6xl mx-auto">
         <p className="text-center text-slate-500 text-sm uppercase tracking-widest mb-4">Звучит знакомо?</p>
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Почему бизнес теряет деньги
+          Проблемы малого и среднего бизнеса, которые мы решаем
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {pains.map((p) => (
@@ -141,21 +142,21 @@ const services = [
   {
     badge: "Продажи",
     icon: "🤖",
-    title: "Отдел продаж на автопилоте",
+    title: "Настройка AmoCRM и Bitrix24 для отдела продаж",
     desc: "Клиент написал — бот ответил за 10 секунд. Заявка сразу в CRM, менеджер видит готовый список для звонка. Никто не теряется, ничего не забывается.",
     features: ["Настройка AmoCRM / Bitrix24", "Бот отвечает сразу, пока менеджер занят", "Автоматические напоминания клиентам", "Наглядная картина продаж"],
   },
   {
     badge: "Автоматизация",
     icon: "⚙️",
-    title: "Бизнес без ручной работы",
+    title: "WhatsApp и Telegram боты для бизнеса",
     desc: "Заявка с сайта сама в CRM. Отчёт готовится без вас. Клиент получает подтверждение автоматически — вы не тратите на это ни минуты.",
     features: ["Автоматизация задач", "Уведомления в Telegram", "Отчёты без вас", "Подключается к любым программам"],
   },
   {
     badge: "Интеграции",
     icon: "🔗",
-    title: "Всё подключено",
+    title: "Интеграции: CRM, мессенджеры, Google Таблицы",
     desc: "Всё работает вместе: сайт, мессенджеры, CRM и таблицы. Больше не нужно копировать вручную — данные сами перетекают куда надо.",
     features: ["CRM ↔ сайт ↔ мессенджеры", "Telegram / WhatsApp боты", "Google Таблицы", "Подключение нужных сервисов"],
   },
@@ -166,7 +167,7 @@ function Services() {
     <section id="services" className="py-20 px-6 bg-[#0a0a0f]">
       <div className="max-w-6xl mx-auto">
         <p className="text-center text-slate-500 text-sm uppercase tracking-widest mb-4">Услуги</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Что мы делаем</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Услуги автоматизации: AmoCRM, WhatsApp боты и ИИ-агенты</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {services.map((s) => (
             <div key={s.title} className="bg-white/5 border border-white/[0.08] rounded-2xl p-6 flex flex-col hover:border-[#4F8EF7]/30 transition-colors">
@@ -258,6 +259,63 @@ function Results() {
             <div key={s.label} className="bg-white/5 border border-white/[0.08] rounded-2xl p-6">
               <div className="text-4xl font-bold text-[#4F8EF7] mb-2">{s.value}</div>
               <div className="text-slate-400 text-sm">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── FAQ ── */
+const faqs = [
+  {
+    q: "Сколько стоит внедрение AmoCRM в Казахстане для малого бизнеса?",
+    a: "Стоимость настройки AmoCRM для малого бизнеса начинается от 80 000 тенге. Итоговая цена зависит от количества пользователей, сложности воронки и нужных интеграций. Первые 7 дней — бесплатно, без предоплаты.",
+  },
+  {
+    q: "Чем ИИ-агент отличается от обычного чат-бота?",
+    a: "Обычный бот работает по скрипту и отвечает только на заранее прописанные команды. ИИ-агент на базе GPT понимает произвольный текст клиента, задаёт уточняющие вопросы, квалифицирует лид и передаёт менеджеру с полным контекстом — 24/7 без участия человека.",
+  },
+  {
+    q: "Можно ли подключить WhatsApp бота для бизнеса без блокировки номера?",
+    a: "Да. Мы работаем через официальный WhatsApp Business API, который не ведёт к блокировке. Настраиваем автоматический приём заявок, ответы на вопросы и уведомления клиентам.",
+  },
+  {
+    q: "Работаете ли вы с бизнесом в Астане и Алматы?",
+    a: "Да, работаем с бизнесом по всему Казахстану — в Астане, Алматы и других городах. Все работы выполняются удалённо, встречи проводим онлайн.",
+  },
+  {
+    q: "Как быстро будет виден результат?",
+    a: "Первый результат — уже через 7 дней. За это время настраиваем систему, подключаем каналы и обучаем команду. Вы видите как работает автоматизация ещё до первой оплаты.",
+  },
+];
+
+function FAQ() {
+  return (
+    <section className="py-20 px-6 bg-[#0a0a0f]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          }),
+        }}
+      />
+      <div className="max-w-3xl mx-auto">
+        <p className="text-center text-slate-500 text-sm uppercase tracking-widest mb-4">Вопросы</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Часто задаваемые вопросы</h2>
+        <div className="space-y-4">
+          {faqs.map((f) => (
+            <div key={f.q} className="bg-white/5 border border-white/[0.08] rounded-2xl p-6">
+              <h3 className="font-semibold text-slate-100 mb-3">{f.q}</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">{f.a}</p>
             </div>
           ))}
         </div>
