@@ -52,7 +52,7 @@ function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <h1 className="inline-flex items-center gap-2 bg-[#4F8EF7]/10 border border-[#4F8EF7]/20 rounded-full px-4 py-1.5 text-sm text-[#4F8EF7] mb-8">
           <span className="w-2 h-2 bg-[#4F8EF7] rounded-full animate-pulse" />
-          Автоматизация бизнеса в Казахстане — AmoCRM, WhatsApp боты, ИИ-агенты
+          Автоматизация бизнеса в Казахстане — CRM, WhatsApp боты, ИИ-агенты
         </h1>
 
         <p className="text-4xl md:text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
@@ -142,9 +142,9 @@ const services = [
   {
     badge: "Продажи",
     icon: "🤖",
-    title: "Настройка AmoCRM и Bitrix24 для отдела продаж",
+    title: "Настройка CRM для отдела продаж",
     desc: "Клиент написал — бот ответил за 10 секунд. Заявка сразу в CRM, менеджер видит готовый список для звонка. Никто не теряется, ничего не забывается.",
-    features: ["Настройка AmoCRM / Bitrix24", "Бот отвечает сразу, пока менеджер занят", "Автоматические напоминания клиентам", "Наглядная картина продаж"],
+    features: ["Настройка CRM под ваш бизнес", "Бот отвечает сразу, пока менеджер занят", "Автоматические напоминания клиентам", "Наглядная картина продаж"],
   },
   {
     badge: "Автоматизация",
@@ -167,7 +167,7 @@ function Services() {
     <section id="services" className="py-20 px-6 bg-[#0a0a0f]">
       <div className="max-w-6xl mx-auto">
         <p className="text-center text-slate-500 text-sm uppercase tracking-widest mb-4">Услуги</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Услуги автоматизации: AmoCRM, WhatsApp боты и ИИ-агенты</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Услуги автоматизации: CRM, WhatsApp боты и ИИ-агенты</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {services.map((s) => (
             <div key={s.title} className="bg-white/5 border border-white/[0.08] rounded-2xl p-6 flex flex-col hover:border-[#4F8EF7]/30 transition-colors">
@@ -270,8 +270,8 @@ function Results() {
 /* ── FAQ ── */
 const faqs = [
   {
-    q: "Сколько стоит внедрение AmoCRM в Казахстане для малого бизнеса?",
-    a: "Стоимость настройки AmoCRM для малого бизнеса начинается от 80 000 тенге. Итоговая цена зависит от количества пользователей, сложности воронки и нужных интеграций. Первые 7 дней — бесплатно, без предоплаты.",
+    q: "Сколько стоит внедрение CRM в Казахстане для малого бизнеса?",
+    a: "Стоимость настройки CRM для малого бизнеса начинается от 80 000 тенге. Итоговая цена зависит от количества пользователей, сложности воронки и нужных интеграций. Первые 7 дней — бесплатно, без предоплаты.",
   },
   {
     q: "Чем ИИ-агент отличается от обычного чат-бота?",

@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Struktor — Автоматизация бизнеса в Казахстане | AmoCRM, WhatsApp бот, ИИ-агент",
-  description: "Настраиваем AmoCRM, WhatsApp и Telegram боты, автоматизируем бизнес-процессы для малого и среднего бизнеса в Астане, Алматы и по всему Казахстану. 7 дней бесплатно.",
+  title: "Struktor — Автоматизация бизнеса в Казахстане | CRM, WhatsApp бот, ИИ-агент",
+  description: "Настраиваем CRM, WhatsApp и Telegram боты, автоматизируем бизнес-процессы для малого и среднего бизнеса в Астане, Алматы и по всему Казахстану. 7 дней бесплатно.",
   keywords: [
     "автоматизация бизнеса Казахстан",
-    "настройка AmoCRM Астана",
+    "настройка CRM Астана",
     "WhatsApp бот для бизнеса",
     "Telegram бот для заявок",
     "CRM для малого бизнеса Алматы",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Struktor — Автоматизация бизнеса в Казахстане",
-    description: "Настраиваем AmoCRM, WhatsApp и Telegram боты, автоматизируем бизнес-процессы. 7 дней бесплатно.",
+    description: "Настраиваем CRM, WhatsApp и Telegram боты, автоматизируем бизнес-процессы. 7 дней бесплатно.",
     url: "https://struktor.work",
     siteName: "Struktor",
     locale: "ru_KZ",
