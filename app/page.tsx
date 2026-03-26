@@ -349,7 +349,7 @@ function FinalCTA() {
             Нет — ничего не должны.
           </p>
           <a
-            href="https://t.me/SwDeepak"
+            href="https://wa.me/77023731186?text=Здравствуйте%2C%20можно%20узнать%20подробнее%3F%20Мне%20это%20интересно"
             className="inline-block bg-[#4F8EF7] hover:bg-[#3a7de8] text-white font-semibold px-10 py-4 rounded-xl transition-colors text-lg shadow-lg shadow-[#4F8EF7]/30"
           >
             Записаться на разбор →
@@ -370,8 +370,8 @@ function Footer() {
           <span className="text-[#4F8EF7]">S</span>truktor
         </span>
         <p className="text-slate-600 text-sm">© 2025 Struktor. Автоматизация бизнеса.</p>
-        <a href="https://t.me/SwDeepak" className="text-slate-400 hover:text-[#4F8EF7] text-sm transition-colors">
-          Telegram →
+        <a href="https://wa.me/77023731186?text=Здравствуйте%2C%20можно%20узнать%20подробнее%3F%20Мне%20это%20интересно" className="text-slate-400 hover:text-[#4F8EF7] text-sm transition-colors">
+          WhatsApp →
         </a>
       </div>
     </footer>
