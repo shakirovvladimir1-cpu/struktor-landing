@@ -26,7 +26,7 @@ function Nav() {
           href="#cta"
           className="bg-[#4F8EF7] hover:bg-[#3a7de8] text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
         >
-          7 дней бесплатно
+          3 дня бесплатно
         </a>
       </div>
     </nav>
@@ -71,7 +71,7 @@ function Hero() {
             href="#cta"
             className="bg-[#4F8EF7] hover:bg-[#3a7de8] text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg shadow-lg shadow-[#4F8EF7]/20"
           >
-            Начать 7 дней бесплатно
+            Начать 3 дня бесплатно
           </a>
           <a
             href="#services"
@@ -271,7 +271,7 @@ function Results() {
 const faqs = [
   {
     q: "Сколько стоит внедрение CRM в Казахстане для малого бизнеса?",
-    a: "Стоимость настройки CRM для малого бизнеса начинается от 80 000 тенге. Итоговая цена зависит от количества пользователей, сложности воронки и нужных интеграций. Первые 7 дней — бесплатно, без предоплаты.",
+    a: "Стоимость настройки CRM для малого бизнеса начинается от 80 000 тенге. Итоговая цена зависит от количества пользователей, сложности воронки и нужных интеграций. Первые 3 дня — бесплатно, без предоплаты.",
   },
   {
     q: "Чем ИИ-агент отличается от обычного чат-бота?",
@@ -342,7 +342,7 @@ function FinalCTA() {
       <div className="relative z-10 max-w-2xl mx-auto text-center">
         <div className="bg-white/5 backdrop-blur border border-[#4F8EF7]/20 rounded-3xl p-10 md:p-14">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Попробуйте 7 дней бесплатно
+            Попробуйте 3 дня бесплатно
           </h2>
           <p className="text-slate-400 mb-8 leading-relaxed">
             Настроим систему под ваш бизнес. Увидите результат — продолжим.
