@@ -31,7 +31,7 @@ export default function TermsPage() {
         </p>
         <p>
           Сервис предоставляет ИП Шакиров Владимир Евгеньевич, бренд «Struktor». Адрес: Республика Казахстан,
-          г. Астана, ул. Кабанбай батыра 6/5, кв. 12. Контакт: <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+          г. Астана, район Есиль, проспект Қабанбай Батыр, дом 6/5. Контакт: <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
         </p>
       </section>
 
@@ -114,7 +114,7 @@ export default function TermsPage() {
         <h2>Terms of Service (English version)</h2>
         <p>
           Struktor Relay (UltraBot v2) is provided by individual entrepreneur Vladimir Shakirov (IP Shakirov Vladimir
-          Evgenievich), brand “Struktor”, Kabanbay Batyr St. 6/5, apt. 12, Astana, Republic of Kazakhstan. Contact:{" "}
+          Evgenievich), brand “Struktor”, 6/5 Kabanbay Batyr Ave., Yesil District, Astana, Republic of Kazakhstan. Contact:{" "}
           <a href={`mailto:${EMAIL}`}>{EMAIL}</a>. Last updated: October 5, 2026.
         </p>
         <p>
