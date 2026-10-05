@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+import { WA_DISPLAY, WA_HOURS, waUrl } from "../lib/contact";
+
+export const metadata: Metadata = {
+  /* Старая версия главной: оставлена по ссылке, но не для поиска. */
+  robots: { index: false, follow: true },
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0a0a0f] text-slate-200">
@@ -25,7 +33,7 @@ function Nav() {
           href="#cta"
           className="bg-[#4F8EF7] hover:bg-[#3a7de8] text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
         >
-          7 дней бесплатно
+          Записаться на аудит
         </a>
       </div>
     </nav>
@@ -50,7 +58,7 @@ function Hero() {
 
         <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
           Настраиваем CRM и чат-боты, автоматизируем рутину —
-          заявки обрабатываются сами, клиенты получают ответ за секунду.
+          заявки обрабатываются сами, клиенты получают ответ за 60 секунд.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -58,7 +66,7 @@ function Hero() {
             href="#cta"
             className="bg-[#4F8EF7] hover:bg-[#3a7de8] text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg"
           >
-            Начать 7 дней бесплатно
+            Записаться на аудит
           </a>
           <a
             href="#services"
@@ -68,7 +76,7 @@ function Hero() {
           </a>
         </div>
 
-        <p className="text-slate-500 text-sm mt-6">Без предоплаты. Без контракта. Просто результат.</p>
+        <p className="text-slate-500 text-sm mt-6">Аудит — 50 000 ₸, засчитываем в запуск. Запускаем за 10 дней.</p>
       </div>
     </section>
   );
@@ -121,7 +129,7 @@ const services = [
     badge: "Продажи",
     icon: "🤖",
     title: "Отдел продаж на автопилоте",
-    desc: "Клиент написал — бот ответил за 10 секунд. Заявка сразу в CRM, менеджер видит готовый список для звонка. Никто не теряется, ничего не забывается.",
+    desc: "Клиент написал — агент ответил за 60 секунд. Заявка сразу в CRM, менеджер видит готовый список для звонка. Никто не теряется, ничего не забывается.",
     features: ["Настройка AmoCRM / Bitrix24", "Бот отвечает сразу, пока менеджер занят", "Автоматические напоминания клиентам", "Наглядная картина продаж"],
   },
   {
@@ -129,7 +137,7 @@ const services = [
     icon: "⚙️",
     title: "Бизнес без ручной работы",
     desc: "Заявка с сайта сама в CRM. Отчёт готовится без вас. Клиент получает подтверждение автоматически — вы не тратите на это ни минуты.",
-    features: ["Автоматизация задач", "Уведомления в Telegram", "Отчёты без вас", "Подключается к любым программам"],
+    features: ["Автоматизация задач", "Уведомления в Telegram", "Отчёты без вас", "Подключаем CRM, Google Таблицы, Telegram"],
   },
   {
     badge: "Интеграции",
@@ -176,13 +184,13 @@ function Services() {
 const steps = [
   {
     num: "01",
-    title: "Разбор за 30 минут",
-    desc: "Бесплатный созвон — разбираем ваш бизнес, находим где теряются деньги и время.",
+    title: "Аудит потерь",
+    desc: "Смотрим, откуда приходят заявки, кто и как быстро отвечает, где они теряются. 50 000 ₸, при запуске засчитываем.",
   },
   {
     num: "02",
-    title: "Внедряем за 7 дней",
-    desc: "Настраиваем систему, обучаем команду. Вы видите результат ещё до оплаты.",
+    title: "Запускаем за 10 дней",
+    desc: "Подключаем WhatsApp и CRM, настраиваем ответ покупателю за 60 секунд, обучаем менеджеров. Оплата: 70% до старта, 30% при сдаче.",
   },
   {
     num: "03",
@@ -215,10 +223,10 @@ function HowItWorks() {
 
 /* ── RESULTS ── */
 const stats = [
-  { value: "3×", label: "рост скорости обработки заявок" },
-  { value: "80%", label: "рутинных задач уходит на автомат" },
-  { value: "7", label: "дней до первого результата" },
-  { value: "24/7", label: "ИИ-агент работает без выходных" },
+  { value: "10", label: "дней от аудита до запуска" },
+  { value: "60", label: "секунд на ответ покупателю, днём и ночью" },
+  { value: "124", label: "заказа за 40 дней: интернет-магазин в Казахстане (по переписке, с кассой не сверяли)" },
+  { value: "434", label: "чата за 14 дней: магазин техники, Бишкек" },
 ];
 
 function Results() {
@@ -247,19 +255,19 @@ function FinalCTA() {
       <div className="max-w-2xl mx-auto text-center">
         <div className="bg-gradient-to-br from-[#4F8EF7]/10 to-transparent border border-[#4F8EF7]/20 rounded-3xl p-10 md:p-14">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Попробуйте 7 дней бесплатно
+            Начните с аудита потерь
           </h2>
           <p className="text-slate-400 mb-8 leading-relaxed">
-            Настроим систему под ваш бизнес. Увидите результат — продолжим.
-            Нет — ничего не должны.
+            Покажем, где теряются заявки и сколько они стоят. Аудит — 50 000 ₸, при запуске засчитываем.
+            Пилот до 30 ноября: 3 места, запуск за 175 000 ₸ вместо 350 000 ₸.
           </p>
           <a
-            href="https://t.me/SwDeepak"
+            href={waUrl()}
             className="inline-block bg-[#4F8EF7] hover:bg-[#3a7de8] text-white font-semibold px-10 py-4 rounded-xl transition-colors text-lg"
           >
-            Записаться на разбор →
+            Записаться на аудит →
           </a>
-          <p className="text-slate-600 text-sm mt-4">Ответим в течение часа</p>
+          <p className="text-slate-600 text-sm mt-4">WhatsApp {WA_DISPLAY} · {WA_HOURS}</p>
         </div>
       </div>
     </section>
@@ -274,9 +282,9 @@ function Footer() {
         <span className="text-xl font-bold">
           <span className="text-[#4F8EF7]">S</span>truktor
         </span>
-        <p className="text-slate-600 text-sm">© 2025 Struktor. Автоматизация бизнеса.</p>
-        <a href="https://t.me/SwDeepak" className="text-slate-400 hover:text-[#4F8EF7] text-sm transition-colors">
-          Telegram →
+        <p className="text-slate-600 text-sm">© 2026 Struktor. Автоматизация бизнеса.</p>
+        <a href={waUrl()} className="text-slate-400 hover:text-[#4F8EF7] text-sm transition-colors">
+          WhatsApp →
         </a>
       </div>
     </footer>

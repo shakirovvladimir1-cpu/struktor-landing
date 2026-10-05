@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SiteFooter from "./SiteFooter";
+import { waUrl } from "../lib/contact";
 
 /* Общая обёртка юридических страниц: шапка как на главной, футер, типографика текста. */
 export default function LegalPage({
@@ -18,12 +19,12 @@ export default function LegalPage({
           <Link href="/" className="text-xl font-bold tracking-tight">
             <span className="text-[#4F8EF7]">S</span>truktor
           </Link>
-          <Link
-            href="/#cta"
+          <a
+            href={waUrl()}
             className="bg-[#4F8EF7] hover:bg-[#3a7de8] text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
           >
-            3 дня бесплатно
-          </Link>
+            Написать в WhatsApp
+          </a>
         </div>
       </nav>
 

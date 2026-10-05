@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Struktor — Автоматизация бизнеса в Казахстане | CRM, WhatsApp бот, ИИ-агент",
-  description: "Настраиваем CRM, WhatsApp и Telegram боты, автоматизируем бизнес-процессы для малого и среднего бизнеса в Астане, Алматы и по всему Казахстану. 7 дней бесплатно.",
+  description: "WhatsApp, CRM и ИИ-агент для магазинов и дистрибьюторов. Ответ покупателю за 60 секунд, запуск за 10 дней. Аудит — 50 000 ₸.",
   keywords: [
     "автоматизация бизнеса Казахстан",
     "настройка CRM Астана",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Struktor — Автоматизация бизнеса в Казахстане",
-    description: "Настраиваем CRM, WhatsApp и Telegram боты, автоматизируем бизнес-процессы. 7 дней бесплатно.",
+    description: "WhatsApp, CRM и ИИ-агент для магазинов и дистрибьюторов. Ответ за 60 секунд, запуск за 10 дней.",
     url: "https://struktor.work",
     siteName: "Struktor",
     locale: "ru_KZ",

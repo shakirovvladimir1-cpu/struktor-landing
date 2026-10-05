@@ -1,5 +1,6 @@
 "use client";
 
+import { WA_HOURS, waUrl } from "../lib/contact";
 
 const cinzel = "font-cinzel";
 const crimson = "font-crimson";
@@ -40,7 +41,7 @@ function Nav({ font }: { font: string }) {
           className={`${font} text-xs tracking-widest font-semibold px-5 py-2 border transition-all hover:opacity-80`}
           style={{ borderColor: "#C9A227", color: "#C9A227" }}
         >
-          7 ДНЕЙ БЕСПЛАТНО
+          АУДИТ ПОТЕРЬ
         </a>
       </div>
     </nav>
@@ -105,7 +106,7 @@ function Hero({ font }: { font: string }) {
           Автоматизация, CRM, ИИ-агенты — всё по команде.
         </p>
         <p className={`${crimson} text-lg mb-12`} style={{ color: "#C9A227", opacity: 0.7 }}>
-          Малый и средний бизнес · 7 дней без риска
+          Магазины и дистрибьюторы · запуск за 10 дней
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -198,7 +199,7 @@ const legions = [
     name: "LEGIO COMMERCIA",
     title: "Отдел продаж на автопилоте",
     desc: "ИИ-легионер принимает первый бой — отвечает на заявки 24/7, не спит, заносит в CRM. Ваши рыцари закрывают сделки.",
-    features: ["Настройка AmoCRM / Bitrix24", "Бот отвечает клиентам мгновенно", "Автоматические напоминания клиентам", "Дашборд командира"],
+    features: ["Настройка AmoCRM / Bitrix24", "Бот отвечает клиентам за 60 секунд", "Автоматические напоминания клиентам", "Дашборд командира"],
     color: "#8B1A1A",
   },
   {
@@ -206,7 +207,7 @@ const legions = [
     name: "LEGIO MACHINA",
     title: "Бизнес без ручного труда",
     desc: "Автоматизируем рутину — заявки, уведомления, отчёты. Ваши люди думают о стратегии, машины несут службу.",
-    features: ["Автоматизация задач", "Telegram / WhatsApp боты", "Авто-отчёты и сводки", "Интеграция любых сервисов"],
+    features: ["Автоматизация задач", "Telegram / WhatsApp боты", "Авто-отчёты и сводки", "CRM, Google Таблицы, Telegram"],
     color: "#1A3A1A",
   },
   {
@@ -292,7 +293,7 @@ function ViaRomana({ font }: { font: string }) {
       num: "I",
       latin: "EXPLORATIO",
       title: "Разведка",
-      desc: "Изучаем ваш бизнес — процессы, боли, цели. Составляем план кампании. Бесплатно.",
+      desc: "Изучаем ваш бизнес — процессы, боли, цели. Составляем план кампании. Аудит — 50 000 ₸, при запуске засчитываем.",
     },
     {
       num: "II",
@@ -358,10 +359,10 @@ function ViaRomana({ font }: { font: string }) {
 /* ── TRIUMPHUS — Results ── */
 function Triumphus({ font }: { font: string }) {
   const stats = [
-    { num: "3×", label: "Рост закрытых сделок", sub: "в среднем по клиентам" },
-    { num: "40ч", label: "Экономия в неделю", sub: "на ручных операциях" },
-    { num: "7", label: "Дней до результата", sub: "первый эффект виден сразу" },
-    { num: "24/7", label: "Легион на страже", sub: "ИИ не спит и не болеет" },
+    { num: "10", label: "Дней до запуска", sub: "от аудита до работающей системы" },
+    { num: "60", label: "Секунд на ответ", sub: "покупателю, днём и ночью" },
+    { num: "124", label: "Заказа за 40 дней", sub: "интернет-магазин в Казахстане, по переписке, с кассой не сверяли" },
+    { num: "434", label: "Чата за 14 дней", sub: "магазин техники, Бишкек" },
   ];
 
   return (
@@ -455,15 +456,15 @@ function Foedus({ font }: { font: string }) {
         <div className="w-20 h-px mx-auto mb-8" style={{ background: "#C9A227", opacity: 0.5 }} />
 
         <p className="text-lg md:text-xl leading-relaxed mb-4 opacity-80">
-          7 дней бесплатно. Полный доступ к системе.
-          Если не понравится — расходимся без обязательств.
+          Покажем, где теряются заявки и сколько они стоят. Аудит — 50 000 ₸, при запуске засчитываем.
+          Пилот до 30 ноября: 3 места, запуск за 175 000 ₸ вместо 350 000 ₸.
         </p>
         <p className={`${font} text-sm tracking-widest mb-12 opacity-50`} style={{ color: "#C9A227" }}>
-          SINE PERICULO · БЕЗ РИСКА
+          SINE MORA · ЗАПУСК ЗА 10 ДНЕЙ
         </p>
 
         <a
-          href="https://t.me/SwDeepak"
+          href={waUrl()}
           className={`${font} inline-block text-sm tracking-widest font-bold px-14 py-5 border-2 transition-all hover:opacity-90`}
           style={{
             background: "#8B1A1A",
@@ -476,7 +477,7 @@ function Foedus({ font }: { font: string }) {
         </a>
 
         <p className="text-sm opacity-40 mt-6">
-          Или напишите в Telegram · Ответим в течение часа
+          {WA_HOURS}
         </p>
       </div>
     </section>

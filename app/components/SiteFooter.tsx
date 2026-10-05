@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { WA_DISPLAY, WA_HOURS, waUrl } from "../lib/contact";
 
 export default function SiteFooter() {
   return (
@@ -8,17 +9,19 @@ export default function SiteFooter() {
           <Link href="/" className="text-xl font-bold">
             <span className="text-[#4F8EF7]">S</span>truktor
           </Link>
-          <p className="text-slate-600 text-sm">© 2025 Struktor. Автоматизация бизнеса.</p>
-          <a href="https://wa.me/77023731186?text=Здравствуйте%2C%20можно%20узнать%20подробнее%3F%20Мне%20это%20интересно" className="text-slate-400 hover:text-[#4F8EF7] text-sm transition-colors">
+          <p className="text-slate-600 text-sm">© 2026 Struktor. Автоматизация бизнеса.</p>
+          <a href={waUrl()} className="text-slate-400 hover:text-[#4F8EF7] text-sm transition-colors">
             WhatsApp →
           </a>
         </div>
         <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row gap-4 justify-center text-slate-600 text-xs text-center">
-          <span>📍 г. Астана, ул. Кабанбай батыра 6/5</span>
+          <span>📍 г. Астана, пр. Кабанбай батыра, 6/5</span>
           <span className="hidden md:block">·</span>
           <a href="mailto:shakirovvladimir1@gmail.com" className="hover:text-slate-400 transition-colors">✉️ shakirovvladimir1@gmail.com</a>
           <span className="hidden md:block">·</span>
-          <a href="tel:+77023731186" className="hover:text-slate-400 transition-colors">📞 +7 702 373 1186</a>
+          <a href={waUrl()} className="hover:text-slate-400 transition-colors">💬 WhatsApp {WA_DISPLAY}</a>
+          <span className="hidden md:block">·</span>
+          <span>{WA_HOURS}</span>
         </div>
         <div className="pt-4 flex flex-row gap-4 justify-center text-slate-600 text-xs">
           <Link href="/privacy" className="hover:text-slate-400 transition-colors">Политика конфиденциальности</Link>

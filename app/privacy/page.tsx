@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   description:
     "Какие данные обрабатывает сервис Struktor Relay (UltraBot v2), зачем, сколько хранит, кому передаёт и как их удалить. Privacy Policy in Russian and English.",
   alternates: { canonical: "https://struktor.work/privacy" },
+  openGraph: {
+    title: "Политика конфиденциальности · Struktor",
+    url: "https://struktor.work/privacy",
+    siteName: "Struktor",
+    locale: "ru_KZ",
+    type: "website",
+  },
 };
 
 export default function PrivacyPage() {

@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
+import { WA_HOURS, waUrl } from "../lib/contact";
 
+export const metadata: Metadata = {
+  /* Старая версия главной: оставлена по ссылке, но не для поиска. */
+  robots: { index: false, follow: true },
+};
 
 const cinzel = "font-cinzel";
 const crimson = "font-crimson";
@@ -92,7 +98,7 @@ function Hero({ cinzel }: { cinzel: string }) {
             href="#cta"
             className={`${cinzel} bg-[#c9942a] hover:bg-[#b8831a] text-[#120a00] font-bold px-8 py-4 rounded-sm transition-colors text-base tracking-widest uppercase shadow-lg shadow-[#c9942a]/20`}
           >
-            ⚔ 7 дней без подати
+            ⚔ Аудит потерь
           </a>
           <a
             href="#services"
@@ -102,7 +108,7 @@ function Hero({ cinzel }: { cinzel: string }) {
           </a>
         </div>
 
-        <p className="text-[#e8d5a3]/40 text-sm mt-6 tracking-wide">Без залога. Без присяги. Лишь результат.</p>
+        <p className="text-[#e8d5a3]/40 text-sm mt-6 tracking-wide">Аудит — 50 000 ₸, засчитываем в запуск. Запускаем за 10 дней.</p>
       </div>
     </section>
   );
@@ -165,14 +171,14 @@ const services = [
     icon: "🏰",
     title: "Отдел продаж на автопилоте",
     desc: "ИИ-вестник отвечает на заявки 24/7. CRM фиксирует каждое слово. Ваши рыцари закрывают сделки — не занимаются перепиской.",
-    features: ["Настройка AmoCRM / Bitrix24", "Бот отвечает клиентам мгновенно", "Авто-напоминания", "Карта сражений (дашборд)"],
+    features: ["Настройка AmoCRM / Bitrix24", "Бот отвечает клиентам за 60 секунд", "Авто-напоминания", "Карта сражений (дашборд)"],
   },
   {
     badge: "Чёрная магия",
     icon: "⚗️",
     title: "Замок без ручного труда",
     desc: "Заклинаниями автоматизации освобождаем слуг от рутины: обработка гонцов, оповещения, летописи, перенос свитков между системами.",
-    features: ["Автоматизация задач", "Гонцы в Telegram", "Авто-отчёты", "Интеграция с любой башней"],
+    features: ["Автоматизация задач", "Гонцы в Telegram", "Авто-отчёты", "CRM, Google Таблицы, Telegram"],
   },
   {
     badge: "Тайные тоннели",
@@ -219,13 +225,13 @@ function Services({ cinzel }: { cinzel: string }) {
 const steps = [
   {
     num: "I",
-    title: "Совет мудрецов — 30 минут",
-    desc: "Бесплатный созвон — разбираем ваше королевство, находим где утекает злато и время.",
+    title: "Совет мудрецов — аудит потерь",
+    desc: "Смотрим, откуда приходят гонцы, кто и как быстро отвечает, где они теряются. 50 000 ₸, при запуске засчитываем.",
   },
   {
     num: "II",
-    title: "Строим за 7 дней",
-    desc: "Возводим систему, обучаем дружину. Результат виден ещё до первой подати.",
+    title: "Строим за 10 дней",
+    desc: "Возводим систему, обучаем дружину. Оплата: 70% до старта, 30% при сдаче.",
   },
   {
     num: "III",
@@ -267,10 +273,10 @@ function HowItWorks({ cinzel }: { cinzel: string }) {
 
 /* ── RESULTS ── */
 const stats = [
-  { value: "3×", label: "быстрее обрабатываются гонцы" },
-  { value: "80%", label: "рутины уходит механическим слугам" },
-  { value: "7", label: "дней до первой победы" },
-  { value: "24/7", label: "ИИ-вестник несёт службу" },
+  { value: "10", label: "дней от аудита до запуска" },
+  { value: "60", label: "секунд на ответ покупателю, днём и ночью" },
+  { value: "124", label: "заказа за 40 дней: интернет-магазин в Казахстане (по переписке, с кассой не сверяли)" },
+  { value: "434", label: "чата за 14 дней: магазин техники, Бишкек" },
 ];
 
 function Results({ cinzel }: { cinzel: string }) {
@@ -313,19 +319,19 @@ function FinalCTA({ cinzel }: { cinzel: string }) {
           <h2 className={`${cinzel} text-3xl md:text-4xl font-black mb-4`}>
             Вступите в Орден
             <br />
-            <span className="text-[#c9942a]">на 7 дней бесплатно</span>
+            <span className="text-[#c9942a]">начните с аудита</span>
           </h2>
           <p className="text-[#e8d5a3]/70 mb-8 leading-relaxed text-lg">
-            Настроим систему под ваше королевство. Увидите победу — останетесь.
-            Нет — не должны ни гроша.
+            Покажем, где теряются заявки и сколько они стоят. Аудит — 50 000 ₸, при запуске засчитываем.
+            Пилот до 30 ноября: 3 места, запуск за 175 000 ₸ вместо 350 000 ₸.
           </p>
           <a
-            href="https://t.me/SwDeepak"
+            href={waUrl()}
             className={`${cinzel} inline-block bg-[#c9942a] hover:bg-[#b8831a] text-[#120a00] font-black px-10 py-4 rounded-sm transition-colors text-base tracking-widest uppercase shadow-lg shadow-[#c9942a]/20`}
           >
             ⚔ Записаться на совет
           </a>
-          <p className="text-[#e8d5a3]/30 text-sm mt-4 tracking-wide">Ответим быстрее почтового голубя</p>
+          <p className="text-[#e8d5a3]/30 text-sm mt-4 tracking-wide">{WA_HOURS}</p>
         </div>
       </div>
     </section>
@@ -338,8 +344,8 @@ function Footer({ cinzel }: { cinzel: string }) {
     <footer className="border-t border-[#c9942a]/20 py-8 px-6 bg-[#0a0600]">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <span className={`${cinzel} text-xl font-bold text-[#c9942a] tracking-widest`}>⚔ STRUKTOR</span>
-        <p className="text-[#e8d5a3]/30 text-sm tracking-wide">© Anno Domini 2025. Орден Автоматизаторов.</p>
-        <a href="https://t.me/SwDeepak" className="text-[#e8d5a3]/40 hover:text-[#c9942a] text-sm transition-colors tracking-wider">
+        <p className="text-[#e8d5a3]/30 text-sm tracking-wide">© Anno Domini 2026. Орден Автоматизаторов.</p>
+        <a href={waUrl()} className="text-[#e8d5a3]/40 hover:text-[#c9942a] text-sm transition-colors tracking-wider">
           Связь с Орденом →
         </a>
       </div>

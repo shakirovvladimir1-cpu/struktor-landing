@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
+import { WA_HOURS, waUrl } from "../lib/contact";
 
-
+export const metadata: Metadata = {
+  /* Старая версия главной: оставлена по ссылке, но не для поиска. */
+  robots: { index: false, follow: true },
+};
 
 const medieval = "font-medieval";
 const goudy = "font-goudy";
@@ -89,7 +94,7 @@ function Hero({ font }: { font: string }) {
           >
             <span style={{ color: "#d4a017" }}>⚜</span>
             <span className={`${font} text-xs tracking-[0.25em]`} style={{ color: "#d4a017" }}>
-              ГРАМОТА АВТОМАТИЗАТОРОВ · 2025
+              ГРАМОТА АВТОМАТИЗАТОРОВ · 2026
             </span>
             <span style={{ color: "#d4a017" }}>⚜</span>
           </div>
@@ -118,7 +123,7 @@ function Hero({ font }: { font: string }) {
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#cta" className={`${font} px-8 py-4 text-sm tracking-widest transition-all`}
               style={{ background: "linear-gradient(135deg, #8b1a1a, #6b1010)", color: "#f0e6c8", border: "1px solid rgba(212,160,23,0.4)", boxShadow: "0 4px 20px rgba(139,26,26,0.4)" }}>
-              ⚔ 7 ДНЕЙ БЕЗ ПОДАТИ
+              ⚔ АУДИТ ПОТЕРЬ
             </a>
             <a href="#services" className={`${font} px-8 py-4 text-sm tracking-widest transition-all`}
               style={{ border: "1px solid rgba(240,230,200,0.2)", color: "rgba(240,230,200,0.8)", background: "rgba(13,10,7,0.5)", backdropFilter: "blur(8px)" }}>
@@ -126,7 +131,7 @@ function Hero({ font }: { font: string }) {
             </a>
           </div>
           <p className="text-xs mt-5 tracking-widest" style={{ color: "rgba(240,230,200,0.3)" }}>
-            БЕЗ ЗАЛОГА · БЕЗ ПРИСЯГИ · ЛИШЬ РЕЗУЛЬТАТ
+            АУДИТ — 50 000 ₸ · ЗАПУСК ЗА 10 ДНЕЙ
           </p>
         </div>
 
@@ -296,7 +301,7 @@ const services = [
     title: "Рыцари Продаж",
     subtitle: "Отдел продаж на автопилоте",
     desc: "ИИ-вестник отвечает на заявки 24/7. CRM записывает каждое слово. Ваши рыцари закрывают сделки — не занимаются перепиской.",
-    features: ["Настройка AmoCRM / Bitrix24", "Бот отвечает клиентам мгновенно", "Авто-напоминания", "Карта сражений (дашборд)"],
+    features: ["Настройка AmoCRM / Bitrix24", "Бот отвечает клиентам за 60 секунд", "Авто-напоминания", "Карта сражений (дашборд)"],
     color: "#8b1a1a",
   },
   {
@@ -304,7 +309,7 @@ const services = [
     title: "Алхимия Бизнеса",
     subtitle: "Бизнес без ручного труда",
     desc: "Заклинаниями автоматизации освобождаем слуг от рутины: заявки, оповещения, летописи и перенос свитков между башнями.",
-    features: ["Автоматизация задач", "Гонцы в Telegram", "Авто-летописи", "Интеграция с любой башней"],
+    features: ["Автоматизация задач", "Гонцы в Telegram", "Авто-летописи", "CRM, Google Таблицы, Telegram"],
     color: "#2a4a1a",
   },
   {
@@ -373,15 +378,15 @@ const steps = [
     roman: "I",
     icon: "📜",
     title: "Совет мудрецов",
-    sub: "30 минут",
-    desc: "Бесплатный созвон. Разбираем ваше королевство, ищем где утекает злато и куда уходят гонцы.",
+    sub: "аудит · 50 000 ₸",
+    desc: "Смотрим, откуда приходят гонцы, кто и как быстро отвечает, где они теряются. При запуске засчитываем.",
   },
   {
     roman: "II",
     icon: "🔨",
     title: "Строительство",
-    sub: "7 дней",
-    desc: "Возводим систему, обучаем дружину. Вы видите победу ещё до первой подати.",
+    sub: "10 дней",
+    desc: "Возводим систему, обучаем дружину. Оплата: 70% до старта, 30% при сдаче.",
   },
   {
     roman: "III",
@@ -447,10 +452,10 @@ function HowItWorks({ font }: { font: string }) {
 
 /* ── RESULTS ── */
 const stats = [
-  { value: "3×", label: "быстрее обрабатываются гонцы" },
-  { value: "80%", label: "рутины уходит механическим слугам" },
-  { value: "7", label: "дней до первой победы" },
-  { value: "24/7", label: "рыцарь несёт службу" },
+  { value: "10", label: "дней от аудита до запуска" },
+  { value: "60", label: "секунд на ответ покупателю, днём и ночью" },
+  { value: "124", label: "заказа за 40 дней: интернет-магазин в Казахстане (по переписке, с кассой не сверяли)" },
+  { value: "434", label: "чата за 14 дней: магазин техники, Бишкек" },
 ];
 
 function Results({ font }: { font: string }) {
@@ -524,20 +529,19 @@ function FinalCTA({ font }: { font: string }) {
             Вступите в Орден
           </h2>
           <h3 className={`${font} text-2xl mb-6`} style={{ color: "#d4a017" }}>
-            7 дней без подати
+            Начните с аудита
           </h3>
 
           <div className="w-32 h-px mx-auto mb-6" style={{ background: "rgba(139,26,26,0.5)" }} />
 
           <p className="text-lg leading-relaxed mb-10" style={{ color: "rgba(240,230,200,0.7)" }}>
-            Настроим систему под ваше королевство.
-            Увидите победу — останетесь.
+            Покажем, где теряются заявки и сколько они стоят. Аудит — 50 000 ₸, при запуске засчитываем.
             <br />
-            Нет — не должны ни гроша и ни монеты.
+            Пилот до 30 ноября: 3 места, запуск за 175 000 ₸ вместо 350 000 ₸.
           </p>
 
           <a
-            href="https://t.me/SwDeepak"
+            href={waUrl()}
             className={`${font} inline-block px-12 py-5 text-sm tracking-widest transition-all`}
             style={{
               background: "linear-gradient(135deg, #8b1a1a 0%, #6b1010 100%)",
@@ -550,7 +554,7 @@ function FinalCTA({ font }: { font: string }) {
           </a>
 
           <p className="text-xs mt-5 tracking-widest" style={{ color: "rgba(240,230,200,0.3)" }}>
-            ОТВЕТИМ БЫСТРЕЕ ПОЧТОВОГО ГОЛУБЯ
+            {WA_HOURS}
           </p>
         </div>
       </section>
@@ -574,10 +578,10 @@ function Footer({ font }: { font: string }) {
           <span className={`${font} tracking-widest text-base`} style={{ color: "#d4a017" }}>STRUKTOR</span>
         </div>
         <p className="text-sm tracking-widest" style={{ color: "rgba(240,230,200,0.25)" }}>
-          © ANNO DOMINI 2025 · ОРДЕН АВТОМАТИЗАТОРОВ
+          © ANNO DOMINI 2026 · ОРДЕН АВТОМАТИЗАТОРОВ
         </p>
         <a
-          href="https://t.me/SwDeepak"
+          href={waUrl()}
           className="text-sm tracking-widest transition-colors"
           style={{ color: "rgba(240,230,200,0.4)" }}
         >

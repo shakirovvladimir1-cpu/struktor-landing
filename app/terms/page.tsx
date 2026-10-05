@@ -9,6 +9,13 @@ export const metadata: Metadata = {
   description:
     "Условия использования сервиса Struktor Relay (UltraBot v2): права и обязанности сторон, оплата, ответственность. Terms of Service in Russian and English.",
   alternates: { canonical: "https://struktor.work/terms" },
+  openGraph: {
+    title: "Условия использования · Struktor",
+    url: "https://struktor.work/terms",
+    siteName: "Struktor",
+    locale: "ru_KZ",
+    type: "website",
+  },
 };
 
 export default function TermsPage() {
