@@ -25,6 +25,9 @@ export default function SiteFooter() {
           <span>·</span>
           <Link href="/terms" className="hover:text-slate-400 transition-colors">Условия использования</Link>
         </div>
+        <p className="pt-4 text-slate-600 text-xs text-center">
+          Индивидуальный предприниматель Шакиров Владимир Евгеньевич · ИИН 920729350160 · Республика Казахстан, г. Астана, район Есиль, проспект Қабанбай Батыр, 6/5 · +7 701 998 4123
+        </p>
       </div>
     </footer>
   );
